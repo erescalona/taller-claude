@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "taller-claude",
+  "owner": {
+    "name": "erescalona"
+  },
+  "metadata": {
+    "description": "El taller de erescalona: la forma de construir proyectos con Claude."
+  },
+  "plugins": [
+    {
+      "name": "taller",
+      "source": "./plugins/taller",
+      "description": "Skills base para construir proyectos: ub-mode siempre cargada, API, web, IA, pruebas de concepto y Mastra."
+    }
+  ]
+}

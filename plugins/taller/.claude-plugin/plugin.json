@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "taller",
+  "displayName": "Taller",
+  "version": "0.1.0",
+  "description": "Skills base para construir proyectos: ub-mode siempre cargada, API, web, IA, pruebas de concepto y Mastra.",
+  "author": {
+    "name": "erescalona"
+  },
+  "keywords": ["ub-mode", "fastify", "astro", "mastra"]
+}
