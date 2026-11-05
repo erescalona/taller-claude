@@ -1,4 +1,4 @@
-# Taller de Claude
+# erescalona-personal
 
 Un plugin de Claude con una forma de construir proyectos paso a paso, con pruebas y una arquitectura
 clara. Se instala una vez en el computador y queda disponible en todos los proyectos, en Claude Desktop y en
@@ -35,7 +35,7 @@ En una terminal (PowerShell en Windows):
 
 ```sh
 claude plugin marketplace add erescalona/taller-claude
-claude plugin install taller@taller-claude
+claude plugin install erescalona-personal@taller-claude
 claude plugin install frontend-design@claude-plugins-official
 ```
 
@@ -45,13 +45,13 @@ Después reinicia Claude Desktop. En una sesión nueva, el plugin aparece en el 
 
 ```sh
 claude plugin marketplace update taller-claude
-claude plugin update taller@taller-claude
+claude plugin update erescalona-personal@taller-claude
 ```
 
 ## Para quien lo mantiene
 
-- Las skills viven en `plugins/taller/skills/`, el ayudante en `plugins/taller/agents/` y los hooks en
-  `plugins/taller/hooks/`.
-- Sube `version` en `plugins/taller/.claude-plugin/plugin.json` con cada cambio: quien ya lo tiene instalado
+- Las skills viven en `plugins/erescalona-personal/skills/`, el ayudante en `plugins/erescalona-personal/agents/` y los hooks en
+  `plugins/erescalona-personal/hooks/`.
+- Sube `version` en `plugins/erescalona-personal/.claude-plugin/plugin.json` con cada cambio: quien ya lo tiene instalado
   solo recibe la actualización cuando cambia ese número.
-- Antes de subir, comprueba con `claude plugin validate plugins/taller --strict`.
+- Antes de subir, comprueba con `claude plugin validate plugins/erescalona-personal --strict`.

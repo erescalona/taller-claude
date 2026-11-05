@@ -1,7 +1,7 @@
 ---
 name: ui-layer
 description: 'Diseña, construye y revisa la interfaz web con Astro, Tailwind CSS v4 e islas React: layouts, páginas, componentes visuales reutilizables de packages/ui, tokens de marca y View Transitions. Cárgala antes de crear o cambiar cualquier pantalla, layout, página, componente, estilo, color, tipografía, animación o navegación del cliente, aunque el encargo no diga «UI» ni «diseño».'
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Skill, mcp__plugin_taller_astro-docs__search_astro_docs
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Skill, mcp__plugin_erescalona-personal_astro-docs__search_astro_docs
 ---
 
 # UI con layouts, componentes y marca

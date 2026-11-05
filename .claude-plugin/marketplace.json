@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "taller",
-      "source": "./plugins/taller",
+      "name": "erescalona-personal",
+      "source": "./plugins/erescalona-personal",
       "description": "Skills base para construir proyectos: ub-mode siempre cargada, API, web, IA, pruebas de concepto y Mastra."
     }
   ]
