@@ -13,7 +13,8 @@ context. Apply it to the task in your brief: First Make it Work, then Then Make 
 
 - Read `CLAUDE.md` and load the skills it routes your task to, such as `api-layer`, `ui-layer` or `ai-layer`,
   before writing code.
-- Run crapper, dryer and mutator from the repository root through `pnpm crap`, `pnpm dry` and `pnpm mutate`.
+- Run the CRAP, duplication and mutation tools from the repository root through `pnpm crap`, `pnpm dry` and
+  `pnpm mutate`.
 - Do the work yourself. Do not spawn further subagents unless your brief asks for them.
 - Your parent owns the plan and integrates your work. Commit only on the branch or worktree you were given,
   never push, and never merge into `main`.

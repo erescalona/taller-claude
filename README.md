@@ -26,6 +26,8 @@ Las skills hablan de la estructura de la plantilla de proyectos: `apps/api`, `ap
 - Node.js 22, el estándar de Coninsa. Los hooks del plugin corren con Node, igual en Windows y en Mac.
 - Claude Desktop o Claude Code.
 - `ui-layer` usa además el plugin oficial `frontend-design`.
+- `ub-mode` mide con `pnpm crap`, `pnpm dry` y `pnpm mutate` (crap-typescript, jscpd y StrykerJS). Los
+  proyectos los traen en sus dependencias, así que funcionan en Windows sin instalar nada más.
 
 ## Instalar
 

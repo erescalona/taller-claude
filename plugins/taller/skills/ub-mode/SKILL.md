@@ -113,17 +113,17 @@ Every time you are asked to make a change follow:
 
 ## Crapper
 
-* Use the crapper tool: `pnpm crap <paths>` from the repository root.
+* Use the CRAP tool, crap-typescript: `pnpm crap <paths>` from the repository root.
 * Reduce each function under  CRAP 10 by splitting it, by testing it, or both.
 * Consider whether case statements are worth reducing.
 
 ## Dryer
 
-* Use the dryer tool (`pnpm dry <paths>` from the repository root) to eliminate duplication that rank 0.8 or above.
+* Use the duplication tool, jscpd (`pnpm dry <paths>` from the repository root), to eliminate duplication that ranks 0.8 or above.
 
 ## Mutator
 
-* Use the mutator tool: `pnpm mutate <paths>` from the repository root; from inside a package every mutant is a false kill (see CLAUDE.md).
+* Use the mutation tool, StrykerJS: `pnpm mutate <paths>` from the repository root; code that only the integration suite reaches takes `pnpm mutate --integration <paths>` (see CLAUDE.md).
 * Cover the uncovered.
 * Kill the survivors.
 * Delete dead code.
