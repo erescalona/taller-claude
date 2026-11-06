@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "erescalona-personal",
   "displayName": "erescalona personal",
-  "version": "0.3.0",
-  "description": "Skills base para construir proyectos: ub-mode siempre cargada, API, web, IA, pruebas de concepto y Mastra.",
+  "version": "0.4.0",
+  "description": "Su forma de construir proyectos con Claude: de la idea a la historia, a construir, guardar y publicar, en español; con ub-mode siempre cargada y las skills base de desarrollo.",
   "author": {
     "name": "erescalona"
   },
