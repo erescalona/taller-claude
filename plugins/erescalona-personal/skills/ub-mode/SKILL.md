@@ -105,11 +105,26 @@ Every time you are asked to make a change follow:
 * The test calls the code the way its user does and checks the result that user would see.
 * If the test would still pass when every function returned nothing, throw it out.
 
+## Refactoring
+
+* Pin what the code does.
+* Change the structure.
+* Prove the behavior did not change.
+
+## Minimal Checks by Default
+
+* While you work, run only the test file you are changing.
+* When the change is done, run `tools/verificar` once: typecheck, tests, integration tests and format.
+* Run it in the background and wait for it; do not cut it short.
+* Crapper, Dryer, Mutator and Cruiser run only when she asks for them, or with `tools/verificar --completo`.
+
 ## Typecheck
 
-* Run `pnpm typecheck`; it runs every workspace package's own `typecheck` script, and a package without one fails.
+* `pnpm typecheck` runs every workspace package's own `typecheck` script, and a package without one fails.
 * Fix each error at its cause.
 * Do not silence the compiler: no `any`, cast, or `@ts-` comment to make it pass.
+
+# Only When She Asks
 
 ## Crapper
 
@@ -133,12 +148,6 @@ Every time you are asked to make a change follow:
 * Use the cruiser tool (`tools/cruiser/cruiser`, rules in `.dependency-cruiser.cjs`).
 * Fix each violation by moving the code to the side the rule allows; the rule's comment says where.
 * Do not loosen a rule or add an exception to make it pass.
-
-## Refactoring
-
-* Pin what the code does.
-* Change the structure.
-* Prove the behavior did not change.
 
 # Practice
 

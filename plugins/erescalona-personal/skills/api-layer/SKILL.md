@@ -249,4 +249,5 @@ features no cambian, porque ya dependían de `app.<concern>`.
 módulo que la publica en `app.<concern>`; si es una función pura sin dominio, a `lib/`. Nunca se
 importa una feature desde otra.
 
-Al terminar, corre `pnpm typecheck`, `tools/cruiser/cruiser` y las pruebas de la API afectadas.
+Al terminar, corre las comprobaciones mínimas de `ub-mode` (`tools/verificar`). `tools/cruiser/cruiser`
+corre solo si ella lo pide.

@@ -18,18 +18,21 @@ description: 'Construye una historia aprobada de docs/historias, paso a paso, co
 ## Mientras construyes
 
 - **Un ejemplo a la vez.** Por cada línea de «Así sé que funciona»: escribe la prueba, mírala fallar por la
-  razón esperada, escribe lo mínimo para que pase. Así cada ejemplo queda fijado por una prueba.
+  razón esperada, escribe lo mínimo para que pase. Así cada ejemplo queda fijado por una prueba. Mientras
+  construyes, corre solo ese archivo de pruebas; nada de `tools/verificar` ni de la suite completa entre paso
+  y paso.
 - **Cuéntale el avance** en una línea al cerrar cada paso del plan, en palabras de lo que ya funciona.
 - Si descubres algo que la historia no decide, no lo inventes: pregúntale con opciones y anota la respuesta en
   la historia.
 
 ## Antes de darlo por terminado
 
-1. Corre las comprobaciones mínimas, desde la raíz del proyecto y en Git Bash:
-   - `tools/verificar`: tipos, pruebas, pruebas de integración y formato. Debe terminar en «Todo pasa».
-   - Por decisión de ella, el cierre de una historia lleva solo esas, aunque `ub-mode` nombre más. CRAP, código
-     repetido, dependencias, build y mutación corren solo si ella las pide, con `tools/verificar --completo`
-     o con `pnpm crap`, `pnpm dry` o `pnpm mutate <archivos>` sobre lo que tocaste.
+1. Corre las comprobaciones mínimas una sola vez, desde la raíz del proyecto y en Git Bash:
+   - `tools/verificar`: tipos, pruebas, pruebas de integración y formato. Debe terminar en «Todo pasa». Si
+     arreglas algo, vuelve a correr solo la prueba que falló y, al final, `tools/verificar` otra vez.
+   - Las mínimas son siempre lo que corre por defecto. CRAP, código repetido, dependencias, build y mutación
+     corren solo si ella las pide, con `tools/verificar --completo` o con `pnpm crap`, `pnpm dry` o
+     `pnpm mutate <archivos>` sobre lo que tocaste.
    - Lánzala con `run_in_background`, con la salida a un archivo de tu scratchpad, y espera el aviso de que
      terminó. No la cortes ni la saltes por tiempo.
    - Arregla cada falla en su causa, sin apagar la comprobación. Nunca uses `--inPlace` de Stryker: cambia los

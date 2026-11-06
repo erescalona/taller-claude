@@ -136,10 +136,10 @@ El concern es `apps/api/src/plugins/agent/` y sigue la skill `api-layer`.
 | Instrucciones, herramientas o workflows | Las pruebas del caso en `tests/<caso>/` con el modelo guionizado |
 | Runtime                                 | `tests/runtime/` y las pruebas de todos los casos                |
 | Contrato de un caso                     | `pnpm typecheck` y las suites de la API que lo consumen          |
-| Imports entre la API y el paquete       | `tools/cruiser/cruiser`                                          |
+| Imports entre la API y el paquete       | `tools/cruiser/cruiser`, solo si ella lo pide                    |
 | Un modelo distinto                      | Una PoC con la skill `poc` antes de cambiar la configuración     |
 
-Cierra con los checks de `ub-mode`, corridos desde la raíz.
+Cierra con las comprobaciones mínimas de `ub-mode` (`tools/verificar`), corridas desde la raíz.
 
 ## Lo que no se hace
 
