@@ -1,6 +1,6 @@
 ---
 name: construir
-description: 'Construye una historia aprobada de docs/historias, paso a paso, con una prueba por cada ejemplo de «Así sé que funciona», todas las comprobaciones del proyecto y la pantalla revisada en Chrome. Úsala cuando erescalona pida construir, hacer, programar o implementar una historia o algo ya acordado; si lo que pide no tiene historia aprobada, usa primero idea.'
+description: 'Construye una historia aprobada de docs/historias, paso a paso, con una prueba por cada ejemplo de «Así sé que funciona», las comprobaciones mínimas del proyecto y la pantalla revisada en Chrome. Úsala cuando erescalona pida construir, hacer, programar o implementar una historia o algo ya acordado; si lo que pide no tiene historia aprobada, usa primero idea.'
 ---
 
 # Construir una historia
@@ -25,9 +25,27 @@ description: 'Construye una historia aprobada de docs/historias, paso a paso, co
 
 ## Antes de darlo por terminado
 
-1. Corre las comprobaciones que pide `CLAUDE.md` del proyecto, sobre lo que tocaste: tipos, pruebas, pruebas de
-   integración si hay base de datos, `pnpm crap`, `pnpm dry`, `pnpm mutate`, las reglas de dependencias y el
-   formato. Arregla cada falla en su causa, sin apagar la comprobación.
+1. Corre las comprobaciones mínimas, desde la raíz del proyecto y en Git Bash:
+   - `tools/verificar`: tipos, pruebas, pruebas de integración y formato. Debe terminar en «Todo pasa».
+   - Por decisión de ella, el cierre de una historia lleva solo esas, aunque `ub-mode` nombre más. CRAP, código
+     repetido, dependencias, build y mutación corren solo si ella las pide, con `tools/verificar --completo`
+     o con `pnpm crap`, `pnpm dry` o `pnpm mutate <archivos>` sobre lo que tocaste.
+   - Lánzala con `run_in_background`, con la salida a un archivo de tu scratchpad, y espera el aviso de que
+     terminó. No la cortes ni la saltes por tiempo.
+   - Arregla cada falla en su causa, sin apagar la comprobación. Nunca uses `--inPlace` de Stryker: cambia los
+     archivos de ella mientras corre.
+   - Si el proyecto aún no tiene `tools/verificar --completo`, su `tools/verificar` es el viejo y corre todo:
+     corre a mano solo `pnpm typecheck`, `pnpm -r test`, `pnpm --filter api test:integration` con la base
+     arriba y `pnpm format:check`.
+   - Si `pnpm mutate` falla con «Tsconfig not found» o `pnpm crap` con «spawn pnpm ENOENT», el proyecto trae
+     el `tools/calidad/mutate.mjs` viejo: Stryker copia el paquete a `<paquete>/.stryker-tmp/sandbox-*`, dos
+     carpetas más adentro, y desde ahí `../../tsconfig.base.json` no existe; la copia que queda tiene un
+     `package.json` y crap-typescript la toma por un paquete sin cobertura. Arréglalo así: en `mutate.mjs`
+     pásale a Stryker `--tempDirName <raíz>/.stryker-tmp-<nombre del paquete>`, que queda a la misma
+     profundidad que el paquete; pon `.stryker-tmp*/` en `.gitignore` y `**/.stryker-tmp*/**` en el `ignore`
+     de `.jscpd.json`; y borra las carpetas `.stryker-tmp/` que hayan quedado en `apps/` y `packages/`.
+   - Si falla algo que no tocaste, mira `git status` antes de arreglarlo: puede ser trabajo a medio hacer de
+     otra sesión en la misma carpeta. En ese caso trabaja en un worktree.
 2. Si la historia tiene pantallas, levanta la web, ábrela en Chrome, recorre cada ejemplo como lo haría ella y
    revisa que la consola no tenga errores.
 3. Cambia el estado de la historia a `construida` y agrega la fecha.

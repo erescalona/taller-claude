@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "erescalona-personal",
   "displayName": "erescalona personal",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Su forma de construir proyectos con Claude: de la idea a la historia, a construir y guardar, en español; con ub-mode siempre cargada y las skills base de desarrollo.",
   "author": {
     "name": "erescalona"

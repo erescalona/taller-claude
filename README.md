@@ -12,7 +12,7 @@ con su skill. Por ahora sus proyectos no se publican en internet: corren en su c
 | Skill | Qué hace |
 | --- | --- |
 | `idea` | Convierte lo que ella quiere en una historia con ejemplos de «así sé que funciona» y la guarda en `docs/historias/`. |
-| `construir` | Construye una historia aprobada: muestra el plan, una prueba por ejemplo, todas las comprobaciones y la pantalla en Chrome. |
+| `construir` | Construye una historia aprobada: muestra el plan, una prueba por ejemplo, las comprobaciones mínimas (tipos, pruebas, integración y formato) y la pantalla en Chrome. |
 | `guardar` | Guarda el trabajo en git en su computador, a su nombre; lo sube a GitHub solo si ella conectó el proyecto a un repositorio. |
 | `nuevo-proyecto` | Arma un proyecto desde su plantilla `erescalona/plantilla-proyectos` en la carpeta donde está trabajando: `.env`, base de datos, git y todas las comprobaciones pasando, sin crear repositorios. |
 | `revisar-mi-compu` | Comprueba que el computador tenga Git, el CLI de GitHub, Node 22, pnpm, Docker y Claude, y dice cómo arreglar lo que falte. |
