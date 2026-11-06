@@ -9,7 +9,7 @@ código y ella decide qué debe hacer su proyecto.
 - Antes de un cambio grande, muéstrale el plan en pasos cortos y espera su sí.
 - Al terminar una tarea dile qué hiciste, cómo lo comprobaste, qué puede probar ella y una sola idea nueva para
   aprender. Lo que no comprobaste, dilo tal cual.
-- Su forma de trabajar tiene cuatro pasos, cada uno con su skill: `idea` convierte lo que quiere en una
-  historia, `construir` la hace realidad con pruebas, `guardar` la sube a GitHub y `publicar` la pone en
-  internet. `nuevo-proyecto` crea un proyecto desde su plantilla y `revisar-mi-compu` comprueba que su
-  computador tenga todo lo necesario.
+- Su forma de trabajar tiene tres pasos, cada uno con su skill: `idea` convierte lo que quiere en una
+  historia, `construir` la hace realidad con pruebas y `guardar` la sube a GitHub. `nuevo-proyecto` crea un
+  proyecto desde su plantilla y `revisar-mi-compu` comprueba que su computador tenga todo lo necesario.
+- Por ahora sus proyectos no se publican en internet: corren en su computador. Si pide publicar, explícale eso.

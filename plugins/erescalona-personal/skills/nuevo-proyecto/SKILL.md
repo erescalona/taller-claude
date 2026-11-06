@@ -46,9 +46,9 @@ Dentro de la carpeta del proyecto:
 2. **El nombre**: `"name"` en el `package.json` de la raíz pasa a `<nombre>`; el título `# Proyecto` del
    README y del `CLAUDE.md`, y el texto «Proyecto» de `apps/web/src/layouts/AppLayout.astro`, pasan al nombre
    legible (por ejemplo «Agenda de citas»). Debajo del título del README y del `CLAUDE.md`, la frase de ella.
-3. **Los `.env`**: copia `.env.example`, `apps/api/.env.example` y `apps/web/.env.example` a `.env` en su misma
-   carpeta. En `apps/api/.env`, la base de `DATABASE_URL` pasa de `proyecto` al nombre con guiones bajos (por
-   ejemplo `agenda_de_citas`), para que cada proyecto tenga sus propios datos.
+3. **Los `.env`**: copia `apps/api/.env.example` y `apps/web/.env.example` a `.env` en su misma carpeta. En
+   `apps/api/.env`, la base de `DATABASE_URL` pasa de `proyecto` al nombre con guiones bajos (por ejemplo
+   `agenda_de_citas`), para que cada proyecto tenga sus propios datos.
 4. `pnpm install`.
 5. Docker Desktop abierto (o `container` en Mac) y `pnpm db:up`: crea la base del proyecto.
 6. `tools/verificar`, en Git Bash. Todo debe pasar; si algo falla, arréglalo en su causa antes de seguir.
@@ -66,6 +66,6 @@ Dentro de la carpeta del proyecto:
 ## Reglas
 
 - El repositorio es privado salvo que ella pida otra cosa.
-- No subas los `.env`: ya están en `.gitignore`. Publicar en Railway viene después, con la skill `publicar`.
+- No subas los `.env`: ya están en `.gitignore`.
 - No cambies la plantilla desde un proyecto: si algo de la plantilla debería mejorar, díselo para que se haga en
   `erescalona/plantilla-proyectos`.

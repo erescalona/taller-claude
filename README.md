@@ -6,17 +6,16 @@ Claude Code.
 
 ## Qué trae
 
-**Su forma de trabajar, en español.** Claude le habla siempre en español sencillo y sigue cuatro pasos, cada uno
-con su skill:
+**Su forma de trabajar, en español.** Claude le habla siempre en español sencillo y sigue tres pasos, cada uno
+con su skill. Por ahora sus proyectos no se publican en internet: corren en su computador.
 
 | Skill | Qué hace |
 | --- | --- |
 | `idea` | Convierte lo que ella quiere en una historia con ejemplos de «así sé que funciona» y la guarda en `docs/historias/`. |
 | `construir` | Construye una historia aprobada: muestra el plan, una prueba por ejemplo, todas las comprobaciones y la pantalla en Chrome. |
 | `guardar` | Sube el trabajo a su GitHub, a su nombre, con un mensaje claro y sin exponer secretos. |
-| `publicar` | Lo pone en internet con el CLI de Railway y comprueba que quedó funcionando. |
 | `nuevo-proyecto` | Crea un proyecto desde su plantilla `erescalona/plantilla-proyectos`: repositorio privado, copia local, `.env`, base de datos y todas las comprobaciones pasando. |
-| `revisar-mi-compu` | Comprueba que el computador tenga Git, el CLI de GitHub, Node 22, pnpm, Docker, Railway y Claude, y dice cómo arreglar lo que falte. |
+| `revisar-mi-compu` | Comprueba que el computador tenga Git, el CLI de GitHub, Node 22, pnpm, Docker y Claude, y dice cómo arreglar lo que falte. |
 
 La forma de hablarle está en `plugins/erescalona-personal/hooks/forma-de-hablar.md` y entra en cada sesión.
 
