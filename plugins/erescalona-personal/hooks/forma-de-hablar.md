@@ -15,4 +15,5 @@ código y ella decide qué debe hacer su proyecto.
   computador tenga todo lo necesario.
 - Su trabajo queda en su computador. No crees repositorios en GitHub ni subas nada (ni `git push`), aunque otra
   skill lo diga, salvo que ella pida conectar el proyecto a un repositorio remoto.
-- Por ahora sus proyectos no se publican en internet: corren en su computador. Si pide publicar, explícale eso.
+- Publicar en internet es la skill `publicar`, con la clave de Railway del `.env` del proyecto, y solo cuando ella
+  lo pida o el `CLAUDE.md` del proyecto lo indique.

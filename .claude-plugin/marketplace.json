@@ -11,7 +11,7 @@
     {
       "name": "erescalona-personal",
       "source": "./plugins/erescalona-personal",
-      "description": "Su forma de construir proyectos con Claude: de la idea a la historia, a construir y guardar, en español; con ub-mode siempre cargada y las skills base de desarrollo."
+      "description": "Su forma de construir proyectos con Claude: de la idea a la historia, a construir, guardar y publicar, en español; con ub-mode siempre cargada y las skills base de desarrollo."
     }
   ]
 }
