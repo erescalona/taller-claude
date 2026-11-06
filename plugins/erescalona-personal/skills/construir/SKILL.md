@@ -21,13 +21,18 @@ description: 'Construye una historia aprobada de docs/historias, paso a paso, co
   razón esperada, escribe lo mínimo para que pase. Así cada ejemplo queda fijado por una prueba. Mientras
   construyes, corre solo ese archivo de pruebas; nada de `tools/verificar` ni de la suite completa entre paso
   y paso.
+- **Si el proyecto ya trae las pruebas de la historia** (por ejemplo, las fases de un repo que las fija, como el de
+  la hackatón), no escribas pruebas nuevas ni cambies las que hay: son el acuerdo. Corre la prueba de cada ejemplo,
+  mírala fallar y escribe el código hasta que pase.
 - **Cuéntale el avance** en una línea al cerrar cada paso del plan, en palabras de lo que ya funciona.
 - Si descubres algo que la historia no decide, no lo inventes: pregúntale con opciones y anota la respuesta en
   la historia.
 
 ## Antes de darlo por terminado
 
-1. Corre las comprobaciones mínimas una sola vez, desde la raíz del proyecto y en Git Bash:
+1. Si el `CLAUDE.md` del proyecto nombra otra comprobación final (por ejemplo `tools/fase/verificar` en el repo de
+   la hackatón), esa manda en lugar de `tools/verificar`. Si no, corre las comprobaciones mínimas una sola vez,
+   desde la raíz del proyecto y en Git Bash:
    - `tools/verificar`: tipos, pruebas, pruebas de integración y formato. Debe terminar en «Todo pasa». Si
      arreglas algo, vuelve a correr solo la prueba que falló y, al final, `tools/verificar` otra vez.
    - Las mínimas son siempre lo que corre por defecto. CRAP, código repetido, dependencias, build y mutación
