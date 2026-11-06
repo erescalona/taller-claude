@@ -40,4 +40,5 @@ En pocas líneas, sin jerga:
 - **Cómo lo comprobé:** cuántos ejemplos quedaron con prueba y qué revisaste en la pantalla.
 - **Pruébalo tú:** la dirección para abrir (por ejemplo `http://localhost:4321`) y qué hacer ahí.
 - **Algo para aprender:** una sola idea de lo que pasó hoy, explicada en dos frases.
-- Lo que no pudiste comprobar, dilo. Y ofrécele guardar el trabajo con la skill `guardar`.
+- Lo que no pudiste comprobar, dilo. Y ofrécele guardar el trabajo en su computador con la skill `guardar`; no
+  subas nada a GitHub.

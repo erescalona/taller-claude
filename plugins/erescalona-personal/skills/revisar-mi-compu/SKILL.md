@@ -19,7 +19,7 @@ Corre cada comprobación y anota el resultado. En Windows, Claude usa Git Bash; 
 | Claude Code | `claude --version` | responde una versión |
 | Autor de los commits | `git config user.name` y `git config user.email` en el proyecto | son los de ella |
 | Rutas largas (Windows) | `git config --global core.longpaths` | dice `true` |
-| Carpeta del proyecto | la ruta actual | no está dentro de OneDrive y es corta, como `C:\dev\…` |
+| Carpeta del proyecto | la ruta actual | no está dentro de OneDrive: su sincronización vuelve lentos o rompe los proyectos |
 
 ## Cómo contárselo
 
@@ -34,7 +34,7 @@ Una tabla corta con «Listo» o «Falta» por cada cosa y, para lo que falte, el
 | Docker | Abrir Docker Desktop y esperar «Engine running»; si no está instalado, seguir la guía de instalación de Coninsa |
 | Claude Code | `irm https://claude.ai/install.ps1 \| iex` |
 | Rutas largas | `git config --global core.longpaths true` |
-| Carpeta en OneDrive | Mover el proyecto a `C:\dev` y abrirlo desde ahí |
+| Carpeta en OneDrive | Avisarle y proponerle una carpeta fuera de OneDrive; ella decide dónde |
 
 ## Reglas
 
