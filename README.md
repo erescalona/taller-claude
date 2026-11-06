@@ -15,7 +15,8 @@ con su skill:
 | `construir` | Construye una historia aprobada: muestra el plan, una prueba por ejemplo, todas las comprobaciones y la pantalla en Chrome. |
 | `guardar` | Sube el trabajo a su GitHub, a su nombre, con un mensaje claro y sin exponer secretos. |
 | `publicar` | Lo pone en internet con el CLI de Railway y comprueba que quedó funcionando. |
-| `revisar-mi-compu` | Comprueba que el computador tenga Git, Node 22, pnpm, Docker, Railway y Claude, y dice cómo arreglar lo que falte. |
+| `nuevo-proyecto` | Crea un proyecto desde su plantilla `erescalona/plantilla-proyectos`: repositorio privado, copia local, `.env`, base de datos y todas las comprobaciones pasando. |
+| `revisar-mi-compu` | Comprueba que el computador tenga Git, el CLI de GitHub, Node 22, pnpm, Docker, Railway y Claude, y dice cómo arreglar lo que falte. |
 
 La forma de hablarle está en `plugins/erescalona-personal/hooks/forma-de-hablar.md` y entra en cada sesión.
 

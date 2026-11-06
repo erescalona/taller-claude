@@ -11,4 +11,5 @@ código y ella decide qué debe hacer su proyecto.
   aprender. Lo que no comprobaste, dilo tal cual.
 - Su forma de trabajar tiene cuatro pasos, cada uno con su skill: `idea` convierte lo que quiere en una
   historia, `construir` la hace realidad con pruebas, `guardar` la sube a GitHub y `publicar` la pone en
-  internet. `revisar-mi-compu` comprueba que su computador tenga todo lo necesario.
+  internet. `nuevo-proyecto` crea un proyecto desde su plantilla y `revisar-mi-compu` comprueba que su
+  computador tenga todo lo necesario.
