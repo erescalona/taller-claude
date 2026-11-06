@@ -1,0 +1,55 @@
+# Comprueba en una máquina Windows que windows/anclar-plugin.ps1 escribe una configuración administrada válida, que
+# respeta lo que ya había, y que Claude la lee como administrada. Se corre a mano desde la pestaña Actions.
+name: anclar-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Una política que ya existía
+        shell: pwsh
+        run: |
+          $folder = Join-Path $env:ProgramFiles 'ClaudeCode'
+          New-Item -ItemType Directory -Force -Path $folder | Out-Null
+          '{ "permissions": { "deny": ["Bash(rm -rf:*)"] } }' | Set-Content -Encoding ascii (Join-Path $folder 'managed-settings.json')
+
+      - name: Correr el script como lo hará ella (Windows PowerShell 5.1)
+        shell: powershell
+        run: Get-Content -Raw windows/anclar-plugin.ps1 | Invoke-Expression
+
+      - name: El archivo es JSON sin BOM, con las claves nuevas y la política anterior
+        shell: pwsh
+        run: |
+          $file = Join-Path $env:ProgramFiles 'ClaudeCode\managed-settings.json'
+          $bytes = [IO.File]::ReadAllBytes($file)
+          if ($bytes[0] -eq 0xEF) { throw 'El archivo empieza con BOM' }
+          Get-Content -Raw $file
+          $s = Get-Content -Raw $file | ConvertFrom-Json
+          if ($s.extraKnownMarketplaces.'taller-claude'.source.repo -ne 'erescalona/taller-claude') { throw 'Falta el marketplace' }
+          if ($s.extraKnownMarketplaces.'taller-claude'.autoUpdate -ne $true) { throw 'Falta autoUpdate' }
+          if ($s.enabledPlugins.'erescalona-personal@taller-claude' -ne $true) { throw 'Falta el plugin' }
+          if ($s.enabledPlugins.'frontend-design@claude-plugins-official' -ne $true) { throw 'Falta frontend-design' }
+          if ($s.language -ne 'spanish') { throw 'Falta el idioma' }
+          if ($s.permissions.deny[0] -ne 'Bash(rm -rf:*)') { throw 'Se perdió la política anterior' }
+
+      - name: Correrlo otra vez no duplica nada
+        shell: powershell
+        run: Get-Content -Raw windows/anclar-plugin.ps1 | Invoke-Expression
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Claude lee la configuración administrada (solo en esta prueba se instala el CLI)
+        shell: pwsh
+        run: |
+          irm https://claude.ai/install.ps1 | iex
+          $env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
+          claude --version
+          claude plugin marketplace list
+          claude plugin list
