@@ -16,6 +16,7 @@ con su skill. Sus proyectos corren en su computador y se publican en internet so
 | `guardar` | Guarda el trabajo en git en su computador, a su nombre; lo sube a GitHub solo si ella conectó el proyecto a un repositorio. |
 | `publicar` | Lo pone en internet con el CLI de Railway y la clave del proyecto que guarda el `.env`, y comprueba que quedó funcionando. Solo cuando ella lo pide. |
 | `nuevo-proyecto` | Arma un proyecto desde su plantilla `erescalona/plantilla-proyectos` en la carpeta donde está trabajando: `.env`, base de datos, git y todas las comprobaciones pasando, sin crear repositorios. |
+| `traer-base-whatsapp` | Trae el proyecto base de la hackatón, el bot de WhatsApp «Agenda Asesores», a la carpeta donde está trabajando, y lo deja listo para la fase 01. |
 | `revisar-mi-compu` | Comprueba que el computador tenga Git, el CLI de GitHub, Node 22, pnpm, Docker, el CLI de Railway y Claude, y dice cómo arreglar lo que falte. |
 
 La forma de hablarle está en `plugins/erescalona-personal/hooks/forma-de-hablar.md` y entra en cada sesión.
